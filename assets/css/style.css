@@ -27,6 +27,7 @@ header{
     color:#ff3340;
     font-size: 40px;
     font-family: 'Oleo Script', cursive;
+    margin-right: 180px;
 }
 .container{
     max-width: 1600px;
@@ -53,4 +54,26 @@ h4{
 
 button{
     margin-bottom: 10px;
+}
+
+.temp,
+.city{
+    color:#feffff;
+    font-size:20px;
+}
+
+.float{
+    float: right;
+}
+
+.temperature{
+    margin-top:20px;
+}
+
+.delete{
+    height: 25px;
+    background: #ff3340;
+    color:#feffff;
+    text-align: center;  
+    line-height: 1px;
 }

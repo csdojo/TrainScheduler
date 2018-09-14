@@ -1,5 +1,30 @@
 $(document).ready(function () {
 
+
+    var APIKey = "0e479fa8c08a4910bf416552422ec8a8";
+
+    // Here we are building the URL we need to query the database
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=New+Jersey&units=imperial&appid=" + APIKey;
+
+    // Here we run our AJAX call to the OpenWeatherMap API
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+      // We store all of the retrieved data inside of an object called "response"
+      .then(function(response) {
+
+        // Log the queryURL
+        console.log(queryURL);
+
+        // Log the resulting object
+        console.log(response);
+
+        // Transfer content to HTML
+        $(".city").html("<p>" + response.name + " Weather</p>");
+        $(".temp").text("Temperature (F) " + response.main.temp); 
+      });
+
     function currentMoment() {
         var today = new Date();
         var h = today.getHours();
@@ -17,8 +42,6 @@ $(document).ready(function () {
     }
 
     currentMoment();
-
-    
 
     var config = {
         apiKey: "AIzaSyANPK23VYZso53124Ic1KdhJEmoDS9VyP8",
@@ -94,7 +117,16 @@ $(document).ready(function () {
         var nextTrain = moment().add(tMinutesTillTrain, "minutes");
         console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm A"));
 
+        var deletebtn = $("<button>");
 
+       deletebtn.addClass("delete btn text-center");
+       deletebtn.text("X");
+
+       $(".delete").on("click", function(event){
+           $(this).parent().parent().remove()
+
+           console.log(this)
+       }) 
 
 
         // print info as a <tr> tag and append to the tbody
@@ -104,14 +136,13 @@ $(document).ready(function () {
             $("<td>").text(frequency),
             $("<td>").text(moment(nextTrain).format("hh:mm A")),
             $("<td>").text(tMinutesTillTrain),
-
+            $("<td>").html(deletebtn),
         );
+
+
 
         $("#train-table").append(trainRow);
 
     });
-
-    
-
 
 });
