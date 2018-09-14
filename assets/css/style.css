@@ -1,0 +1,56 @@
+body{
+    background-image: url("../image/back.png")
+}
+
+.outer{
+    background: rgba(34, 34, 34, 0.219);
+    border: 5px solid #ff3340;
+    border-radius: 10px;
+}
+
+.inner{
+    background: rgba(34, 34, 34, 0);
+    border: 5px solid #ff3340;
+    margin: 8px;
+    border-radius: 10px;
+    
+}
+
+header{
+    font-family: 'Oleo Script', cursive;
+    color:#feffff;
+    font-size: 60px;
+    text-shadow: 2px 1px #ff3340;
+}
+
+#clock{
+    color:#ff3340;
+    font-size: 40px;
+    font-family: 'Oleo Script', cursive;
+}
+.container{
+    max-width: 1600px;
+    margin-top: 10px;
+}
+
+#infoBox,
+.col-9{
+    border: 1px dashed #feffff;
+    color:#feffff;
+    margin-top:10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h4{
+    color:#ff3340;
+    margin-top: 10px;
+    font-family: 'Oleo Script', cursive;
+    font-size:30px;
+    text-shadow: 0px 1px #feffff;
+}
+
+button{
+    margin-bottom: 10px;
+}
