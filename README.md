@@ -1,13 +1,6 @@
 # Train Scheduler
 
-When you add train, administrator should be able to submit the following:
+When you add train, then you can check the schedule board to know the next arrival and waiting time.
 
-- Train Name
-
-- Destination
-
-- First Train Time -- in military time
-
-- Frequency -- in minutes
-
-Then the train board will tell you the frequency, next arrival and waiting time. 
+Here is the link:
+https://csdojo.github.io/TrainScheduler/
