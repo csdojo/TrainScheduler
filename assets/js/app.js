@@ -122,11 +122,6 @@ $(document).ready(function () {
        deletebtn.addClass("delete btn text-center");
        deletebtn.text("X");
 
-       $(".delete").on("click", function(event){
-           $(this).parent().parent().remove()
-
-           console.log(this)
-       }) 
 
 
         // print info as a <tr> tag and append to the tbody
@@ -143,6 +138,19 @@ $(document).ready(function () {
 
         $("#train-table").append(trainRow);
 
+        $(".delete").on("click", function(event){
+            var me = $(this)
+            var parent = me.parent();
+            var grandParent = parent.parent();
+            console.log(me);
+ 
+            console.log(parent);
+ 
+            console.log(grandParent);
+            grandParent.remove()
+ 
+         //    console.log(this)
+        }) 
     });
 
 });
